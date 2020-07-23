@@ -4,10 +4,63 @@
 
 <form action="/url where you want to submit the form data">
     <input type="text" placeholder="some stuff">
+    <!--
+        required field
+    -->
+    <input type="text" required placeholder="required text">
+
+    <!--
+        radio buttons
+        type of input
+        each needs to be nested in its own label element
+        by wrapping input in label, it will associate the radio button with the label element surrounding it
+
+        All related radio buttons have the same name element to create a group
+
+        By creating a group, selecting any single radio button will deselect the otehr buttons within the same group
+
+        This ensures only one option is selected by the user
+    -->
+    <label for="indoor-outdoor">
+        <input type="radio" name="indoor-outdoor" value="indoor">Indoor
+        <input type="radio" name="indoor-outdoor" value="outdoor">Outdoor
+    </label>
+
+    <!--
+        checkboxes
+
+        type of input
+
+        each has its own label element
+        by wrapping input in a label, it will automatically associate the checkbox with the label surrounding it
+
+        all related checkboxes should have the same name attribute
+
+        best practice is to explicitly define relationship between a checkbox input and corresponding label by setting for attribute on the label to match the id of the input
+    -->
+    <label for="loving">
+        <input id="loving" type="checkbox" name="personality" value="loving"> Loving
+        <input id="cranky" type="checkbox" name="personality" value="cranky"> Cranky
+    </label>
+
+    <!--
+        value attribute
+
+        inputs of type radio and checkbox report values from the value attribute
+
+        If you omit the value attribute, the form will submit withe the default value, which is on.
+
+        So you would get indoor-outdoor=on, which is not useful
+
+        check radio buttons and checkboxes by default with checked attribute
+    -->
+
+    <input type="radio" name = "test-name" checked>
+
+    <!--
+        submit buttons
+    -->
     <button type="submit">this button submits the form</button>
 </form>
 
-<!--
-    submit buttons
--->
 
