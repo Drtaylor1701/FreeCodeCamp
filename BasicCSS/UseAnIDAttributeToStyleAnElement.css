@@ -1,0 +1,9 @@
+<!--an id is not reusable
+    should only be applied to one element
+    
+    id has higher importance than a class so if both are applied and ID will override the class
+-->
+
+#cat-photo-element {
+    background-color: green;
+}
