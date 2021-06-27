@@ -1,1 +1,0 @@
-var wordBlanks = "My " + myNoun + " is " + myAdjective + " and " + myVerb + myAdverb + "."
